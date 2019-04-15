@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visualization of HK Listed Stocks</title>
+
+    <!-- Bootstrap -->
+    <link href="web/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick slider css -->
+    <link href="web/css/skdslider.css" rel="stylesheet">
+    <!-- Font awesome css -->
+    <link rel="stylesheet" href="web/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- smooth animate css file -->
+    <link rel="stylesheet" href="web/css/animate.css"> 
+    <!-- Main style css -->
+    <link rel="stylesheet" href="web/style.css">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>     
+   
+    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  <!-- BEGAIN PRELOADER -->
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+  <!-- END PRELOADER -->
+
+  <!-- START HEADER SECTION -->
+  <header id="headerArea">
+    <a href="#" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="slider_area">           
+          <div class="menuarea"> 
+            <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right custom_nav mobnav" id="top-menu">
+                    <li class="active"><a href="#headerArea">HOME</a></li>
+                    <li><a href="#featuresSection">FEATURES </a></li>
+                    <li><a href="#visualization1">VISUALIZATIONS</a></li>
+                    <li><a href="#newsletter">REPORT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                  </ul>
+                </div><!--/.nav-collapse -->
+              </div>
+            </div>
+          </div>
+          <!--set autoSlide:false in custom.js for one page static header-->
+          <ul id="demo1" class="slides">
+            <li>
+              <img src="web/img/stock_background.jpg" style="opacity: 0.8;"/>
+              <!--Slider Description example-->
+              <div class="slide-desc">
+                <div class="slide_descright">
+                  <h1>Visualization of HK Listed Stocks</h1>
+                  <p></p>
+                  <div class="header_btnarea">
+                    <a href="#firstTop" class="learnmore_btn">Visualizations</a>
+                    <a href="https://github.com/feifang/comp7507-project/blob/master/Project%20Report.pdf" class="download_btn">View Report</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>           
+        </div>
+      </div>  
+    </div>      
+  </header>
+  <!-- END HEADER SECTION -->
+
+  <!-- START FEATURES SECTION -->
+  <section id="featuresSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="features_ara">
+            <h1>Built with D3.js v4.0</h1>
+            <p> </p>
+            <div class="features_responsive">
+              <div class="row">
+                <div class="col-lg-4 col-md-4">
+                  <div class="single_features_responsive wow fadeInUp">
+                    <i class="fa fa-caret-square-o-right desktop_icon"></i>
+                    <h2>Animation</h2>
+                    <p>We use animation to show more dimensions of data. For example, in the Circular Treemap, using D3 Transition we are able to show the fourth dimension of data - time.</p>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                  <div class="single_features_responsive wow fadeInUp">
+                   <i class="fa fa-bar-chart-o font_icon"></i>
+                    <h2>Interaction</h2>
+                    <p>Using Linking & Brushing technique, implemented with jQuery. We aim to provide a set of intuitive and interactive visualization to help users create more insight of data.</p>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                  <div class="single_features_responsive wow fadeInUp">
+                     <i class="fa fa-file-code-o html_icon"></i>
+                    <h2>Python</h2>
+                    <p>Last but not least, Python has been used for data scraping and cleaning. It provides us with a great way to gain more data, and process data more efficiently.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>  
+   <!-- START VISUALIZATION AREA -->
+   
+   <!-- START FIRST VISUALIZATION -->
+    <div class="features_productarea">
+      <div id = "firstVis" class="direction_icon">
+        <a id="firstTop" class="dirc_up" href="#">
+          <i class="fa fa-chevron-up"></i>
+        </a>
+        <a id="firstBottom" class="dirc_down" href="#">
+          <i class="fa fa-chevron-down"></i>
+        </a>
+      </div>
+      <section id="visualization1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-md-10" id="the-past-vis">
+          	<iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="circle-packing.html" marginwidth="0" marginheight="0" style="height:1100px; width: 1400px; border : none; transform: scale(0.65); 
+   transform-origin: 0% 0%; " scrolling="no"></iframe>
+          </div>
+          <div class="col-lg-2 col-md-2">
+          	<h1>The Past</h1>
+            <p>Which group of stocks (grouped by region / industry) account for the performance of an index within a time period? </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+    </section>
+    <!-- START SECOND VISUALIZATION -->
+    <div class="features_productarea">
+      <div class="direction_icon">
+        <a id="firstTop" class="dirc_up" href="#">
+          <i class="fa fa-chevron-up"></i>
+        </a>
+        <a id="firstBottom" class="dirc_down" href="#">
+          <i class="fa fa-chevron-down"></i>
+        </a>
+      </div>
+      <section id="visualization2">
+      <div class="container">
+      	<div class="row">
+          <div class="col-lg-2 col-md-2">
+          	<h1>Now</h1>
+          	<p>Oftentimes, industries as a whole may significantly outperform or underperform the index as a whole.</p>
+          </div>
+          <div class="col-lg-10 col-md-10" id="now-vis">
+            <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="sunburst-chart.html" marginwidth="0" marginheight="0" style="height:950px; width: 1350px; border : none; transform: scale(0.75); 
+   transform-origin: -15% -5%;" scrolling="no"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- START THIRD VISUALIZATION -->
+    <div class="features_productarea">
+      <div class="direction_icon">
+        <a id="firstTop" class="dirc_up" href="#">
+          <i class="fa fa-chevron-up"></i>
+        </a>
+        <a id="firstBottom" class="dirc_down" href="#">
+          <i class="fa fa-chevron-down"></i>
+        </a>
+      </div>
+      <section id="visualization3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-9">
+          	<iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="radar-charts.html" marginwidth="0" marginheight="0" style="height:800px; width: 1500px; border : none; transform: scale(0.85); 
+   transform-origin: -100% 0%; " scrolling="no"></iframe>
+          </div>
+          <div class="col-lg-2 col-md-2">
+          	<h1>The Future</h1>
+            <p>An analytical tool based on fundamentals for facilitating investment decisions. Specifically, we aim to show, in a single view, the fundamental strength of a company plus its recent stock price performance. </p>
+          </div>
+        </div> 
+      </div>
+    </div>
+    </section>
+
+  <!-- START VIDEO SECTION -->
+  <section id="videoSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="video_area">
+            <h1>The Extras</h1>
+            <p>Unearth the relationship between stocks in another aspect - the interpersonal relationship between directors</p>
+            <div class="featured_video">
+              <img class="extra-vis" src="image/directorsNetwork.png" alt="Hidden Network of Directors" style="transform: scale(0.80); margin-top: -45px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>      
+  </section>
+  <!-- END VIDEO SECTION -->
+
+
+  <!-- START NEWS LETTER -->
+  <section id="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="newsletter_area">
+            <div class="row">
+              <div class="col-lg-7 col-md-7 col-sm-12">
+                <div class="newsletter_left wow fadeInLeft">
+                  <h2>Project <span> Report</span></h2>
+                  <p>Want to learn more about our findings on Financial Data of HK Listed Stocks? Check out the full version of our report!</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="newsletter_right wow fadeInRight">
+                  <form action="">
+                    <input class="view-report" type="submit" value="View">
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-12">
+              	<img src="web/img/report_qr_code.jpg" style="width:150px;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END NEWS LETTER -->
+
+  <!-- START CONTACT SECTION -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="contact_area">
+            <h1>Presented to you by</h1>
+            <hr class="primary">
+            <a href="https://cn.linkedin.com/in/karenfeifang">FANG FEI, KAREN</a><br>
+            <a>NG KWONG HEI, EDDIE</a><br>
+            <a>TONG JIN TAO, VIRGIL</a><br>
+            <div class="row">
+            <div class="col-lg-4 col-lg-offset-2 text-center">
+        	  <i class="fa fa-university fa-3x wow bounceIn"></i>
+              <p>COMP7507 <br> Visualization and visual analytics</p>
+            </div>
+            <div class="col-lg-4 text-center">
+        	  <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+			  <p><a href="mailto:feifang@connect.hku.hk">feifang@connect.hku.hk</a><br><span>Your comments are welcome.</span></p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END CONTACT SECTION -->
+
+  <!-- START FOOTER SECTION -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="footer_area">
+            <p>Designed By <a href="http://wpfreeware.com/" rel="nofollow">WpFreeware</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- END FOOTER SECTION -->
+
+  <!-- JQuery Files -->
+
+  <!-- Initialize jQuery Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Google map -->
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="web/js/jquery.ui.map.js"></script>  
+  <!-- Skds slider -->
+  <script src="web/js/skdslider.min.js"></script>
+  <!-- Bootstrap js  -->
+  <script src="web/js/bootstrap.min.js"></script>
+  <!-- For smooth animatin  -->
+  <script src="web/js/wow.min.js"></script> 
+
+  <!-- Custom js -->
+  <script type="text/javascript" src="web/js/custom.js"></script>
+
+  </body>
+</html>
